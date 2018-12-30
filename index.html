@@ -1,261 +1,620 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <script src="jquery.min.js"></script>
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-      overflow-x: hidden;
-    }
+	<head>
+        <meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+        <style>
+            body {
+                height:100%;
+                overflow: hidden;
+            }
+            html {
+                height:100%;
+            }
+        </style>
+		<script>
+			var MADebugMode = false;
+			var mitya = {};
+			var m = mitya;
+		</script>
+        <script>
+            var mityaSettings = {
+  "screenWidth" : 375,
+  "screenHeight" : 667,
+  "screenDensity" : 1,
+  "imageFilepathPrefix" : ""
+};
+            var userCodeOnEnter = '';
+            var screens = [
+  {
+    "height" : 74,
+    "uid" : "C0F43B20-9238-408C-867C-7DE7327B22C2",
+    "homeScreen" : false,
+    "layers" : [
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "3988CE3E-73D5-4253-8A13-80184E76FD72",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
 
-    .prototype-container {
-      position: absolute;
-      height: 100%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L74,0 L74,74 L0,74 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(130,130,130,1.000000)",
+        "userCode" : "",
+        "index" : 0,
+        "parentScreenUid" : "C0F43B20-9238-408C-867C-7DE7327B22C2",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Rectangle",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "Rectangle",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSTextLayer",
+        "uid" : "16CBBD30-3958-4F07-8201-28BF08E6D596",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 15,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 30,
+        "hidden" : false,
+        "overrides" : {
 
-    .prototype-container ::-webkit-scrollbar {
-      display: none;
-    }
-
-    .artboard {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      display: none;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, .12);
-      overflow: hidden;
-    }
-
-    .artboard.is-active {
-      opacity: 1;
-      display: block;
-    }
-
-    .artboard-scroll-container,
-    .artboard-fixed-container {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .artboard-fixed-container {
-      pointer-events: none;
-    }
-
-    .artboard-scroll-container {
-      overflow: scroll;
-    }
-
-    .artboard-content {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-size: contain;
-    }
-
-    .hotspot {
-      cursor: pointer;
-      position: absolute;
-      opacity: 0;
-    }
-
-    body[can-show-hotspots] .hotspot {
-      background-color: rgba(239, 108, 0, .2);
-      box-shadow:
-          0 0 0 3px rgba(239, 108, 0, .5) inset,
-          0 4px 8px rgba(239, 108, 0, .25);
-    }
-
-    .highlight-hotspots .hotspot {
-      animation: hotspotAnimation .6s ease;
-    }
-
-    @keyframes hotspotAnimation {
-      0% {
-        opacity: 0;
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 1,
+        "parentScreenUid" : "C0F43B20-9238-408C-867C-7DE7327B22C2",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "1",
+        "textContent" : {
+          "fontSize" : 20,
+          "color" : "rgba(255,255,255,1.000000)",
+          "letterSpacing" : 3,
+          "fontWeight" : 400,
+          "lineHeight" : 1.2,
+          "textAlign" : "center",
+          "text" : "1",
+          "fontFamily" : "Helvetica Neue",
+          "fontStyle" : "italic",
+          "textDecoration" : "",
+          "textTransform" : ""
+        },
+        "height" : 23,
+        "borderWidth" : 0,
+        "top" : 26,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 30,
+        "guid" : "1",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 26
       }
-      50% {
-        opacity: 1;
+    ],
+    "width" : 74,
+    "userCodeOnEnter" : "",
+    "symbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+    "name" : "symb"
+  },
+  {
+    "height" : 667,
+    "uid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+    "homeScreen" : false,
+    "layers" : [
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "C5C3515B-C4AB-4FAC-80F8-8CEFA0EC6969",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 0.4461728036403656,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,239 L0,239 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(130,130,130,1.000000)",
+        "userCode" : "",
+        "index" : 0,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "BG",
+        "height" : 239,
+        "borderWidth" : 0,
+        "top" : 131,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "BG",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 131
+      },
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "44EAD046-C0C0-4AF7-899B-812B2C91A7B5",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 0.4461728036403656,
+        "clip" : false,
+        "parentLayerUid" : "A80972AA-CE2A-42BE-8D7C-AF90C0BB7FE1",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,239 L0,239 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 1,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Mask",
+        "height" : 239,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group ScrollGroup",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "Mask",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSSymbolInstance",
+        "uid" : "6624E186-9FEA-4FF1-AD6A-7B38CE7E7A7A",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : true,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 2,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "symb 15",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "symb 15",
+        "scale" : 1,
+        "parentSymbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSSymbolInstance",
+        "uid" : "83FDDF77-D53E-47E2-A40F-201C120B088D",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "left" : 124,
+        "hidden" : false,
+        "overrides" : {
+          "1" : "2"
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : true,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 3,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "symb 14",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 124,
+        "guid" : "symb 14",
+        "scale" : 1,
+        "parentSymbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSSymbolInstance",
+        "uid" : "4E1DD314-FD1E-4999-9E9C-D1BB8F78CF77",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "left" : 248,
+        "hidden" : false,
+        "overrides" : {
+          "1" : "3"
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : true,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 4,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "symb 13",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 248,
+        "guid" : "symb 13",
+        "scale" : 1,
+        "parentSymbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSSymbolInstance",
+        "uid" : "A5D6DE9A-0FFA-44CE-A2D9-783637EA7CE5",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "left" : 372,
+        "hidden" : false,
+        "overrides" : {
+          "1" : "4"
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : true,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 5,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "symb 12",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 372,
+        "guid" : "symb 12",
+        "scale" : 1,
+        "parentSymbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSSymbolInstance",
+        "uid" : "DAD70927-9CF1-4354-B2FE-C20D385D2DAE",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 74,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "left" : 496,
+        "hidden" : false,
+        "overrides" : {
+          "1" : "5"
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : true,
+        "path" : "",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 6,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "symb 11",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 496,
+        "guid" : "symb 11",
+        "scale" : 1,
+        "parentSymbolID" : "07A3F5D7-4708-4426-9EC6-01AFEF6958F1",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSLayerGroup",
+        "uid" : "DD46A35D-BD06-4BF5-8E30-794D80E6E89C",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 570,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "A80972AA-CE2A-42BE-8D7C-AF90C0BB7FE1",
+        "left" : 64,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "",
+        "flattenGroup" : false,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 7,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Group",
+        "height" : 74,
+        "borderWidth" : 0,
+        "top" : 83,
+        "isGroup" : true,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "Group ScrollGroup",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 64,
+        "guid" : "Group",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 83
+      },
+      {
+        "sketchClassName" : "MSLayerGroup",
+        "uid" : "A80972AA-CE2A-42BE-8D7C-AF90C0BB7FE1",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : true,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "",
+        "flattenGroup" : false,
+        "backgroundColor" : "rgba(0,0,0,0.000000)",
+        "userCode" : "",
+        "index" : 8,
+        "parentScreenUid" : "44D121FF-14A1-4A8F-8624-32B8367F7748",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Group ScrollGroup",
+        "height" : 239,
+        "borderWidth" : 0,
+        "top" : 131,
+        "isGroup" : true,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : true,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "Group ScrollGroup",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 131
       }
-      100% {
-        opacity: 0;
-      }
-    }
-  </style>
-</head>
-<body can-show-hotspots>
-
-  <div class="prototype-container">
-  </div>
-
-  <script>
-
-    class Proto {
-      constructor(prototypeData) {
-        this.prototypeData = prototypeData;
-        this.buildUi();
-      }
-
-      buildUi() {
-        this.buildArtboards();
-
-        if (this.prototypeData.title) {
-          document.title = this.prototypeData.title;
-        }
-
-        $(window).on('hashchange', () => {
-          this.setArtboardVisible(this.getUrlInfo().artboardId);
-        });
-
-        $(document).click(() => {
-          if (this.shouldSuppressHotspotReveal_) {
-            return;
-          }
-
-          $(document.body).removeClass('highlight-hotspots');
-          let f = document.body.offsetWidth;
-          $(document.body).addClass('highlight-hotspots');
-        });
-
-        $(window).on('resize', () => this.resize());
-
-        this.setArtboardVisible(this.getUrlInfo().artboardId);
-      }
-
-      resize() {
-        let width = this.startArtboard.viewportWidth || this.startArtboard.width;
-        let height = this.startArtboard.viewportHeight || this.startArtboard.height;
-        if (this.currentArtboard.viewportWidth && this.currentArtboard.viewportHeight) {
-          width = this.currentArtboard.viewportWidth;
-          height = this.currentArtboard.viewportHeight;
-        }
-
-        let xScale = window.innerHeight / height;
-        let yScale = window.innerWidth / width;
-        $('.prototype-container')
-            .css({
-              width: width,
-              height: height,
-              zoom: Math.min(1, Math.min(xScale, yScale)),
-            });
-      }
-
-      getUrlInfo() {
-        let hash = window.location.hash;
-
-        return {
-          artboardId: hash ? hash.substring(1) : this.prototypeData.flowStartArtboardId,
-        };
-      }
-
-      buildArtboards() {
-        Object.keys(this.prototypeData.artboards).forEach(id => {
-          let artboardData = this.prototypeData.artboards[id];
-          let $artboard = $('<div>')
-              .addClass('artboard')
-              .attr('data-artboard-id', id)
-              .appendTo('.prototype-container');
-
-          // add scrollable content
-          let $artboardScrollContainer = $('<div>')
-              .addClass('artboard-scroll-container')
-              .appendTo($artboard);
-          let $artboardScrollableContent = $('<div>')
-              .addClass('artboard-content')
-              .css({
-                backgroundImage: `url(${id}.png)`,
-                width: artboardData.width,
-                height: artboardData.height,
-              })
-              .appendTo($artboardScrollContainer);
-
-          // add fixed content
-          if (artboardData.hasFixedLayers) {
-            let $artboardFixedContainer = $('<div>')
-                .addClass('artboard-fixed-container')
-                .appendTo($artboard);
-            let $artboardFixedContent = $('<div>')
-                .addClass('artboard-content')
-                .css({
-                  backgroundImage: `url(${id}_fixed.png)`,
-                  width: artboardData.width,
-                  height: artboardData.height,
-                })
-                .appendTo($artboardFixedContainer);
-          }
-
-          if (id == this.prototypeData.flowStartArtboardId) {
-            // this is the start artboard
-            this.startArtboard = artboardData;
-            this.currentArtboard = artboardData;
-          }
-
-          artboardData.hotspots.forEach(hotspotData => {
-            let $hotspot = $('<div>')
-              .addClass('hotspot')
-              .attr('data-artboard-id', id)
-              .css({
-                left: hotspotData.rectangle.x,
-                top: hotspotData.rectangle.y,
-                width: hotspotData.rectangle.width,
-                height: hotspotData.rectangle.height,
-              })
-              .appendTo(hotspotData.isFixed
-                  ? $artboard // don't add to $artboardFixedContent because of pointer-events:none
-                  : $artboardScrollableContent);
-            $hotspot.click(event => {
-              this.gotoTarget(hotspotData.target)
-              event.stopPropagation();
-            });
-          });
-        });
-      }
-
-      gotoTarget(target) {
-        if (target == 'back') {
-          history.back();
-          return;
-        }
-
-        this.gotoArtboard(target);
-      }
-
-      gotoArtboard(artboardId) {
-        window.location.href= '#' + artboardId;
-      }
-
-      setArtboardVisible(artboardId) {
-        this.currentArtboard = this.prototypeData.artboards[artboardId];
-
-        $('.artboard-scroll-container').scrollLeft(0).scrollTop(0);
-
-        $(document.body).removeClass('highlight-hotspots');
-        $('.artboard').removeClass('is-active');
-        $(`.artboard[data-artboard-id="${artboardId}"]`).addClass('is-active');
-
-        this.resize();
-      }
-    }
-
-  </script>
-  <script>
-    new Proto(
-      {"title":null,"flowStartArtboardId":"13F097AC-0D66-41C7-83CC-43927D22EF4C","artboards":{"13F097AC-0D66-41C7-83CC-43927D22EF4C":{"title":"iPhone 8","width":375,"height":667,"viewportWidth":375,"viewportHeight":667,"hotspots":[{"rectangle":{"x":165,"y":279,"width":45,"height":110},"target":"36F0CBFA-89A8-4BEB-A6B8-FE2995696EA5","isFixed":0}],"hasFixedLayers":false},"36F0CBFA-89A8-4BEB-A6B8-FE2995696EA5":{"title":"iPhone 8 Copy","width":375,"height":1318,"viewportWidth":375,"viewportHeight":667,"hotspots":[{"rectangle":{"x":165,"y":279,"width":45,"height":110},"target":"4702DD1B-B13B-445D-992B-4963A15E845D","isFixed":0}],"hasFixedLayers":true},"4702DD1B-B13B-445D-992B-4963A15E845D":{"title":"iPhone 8 Copy 2","width":375,"height":667,"viewportWidth":375,"viewportHeight":667,"hotspots":[{"rectangle":{"x":165,"y":279,"width":45,"height":110},"target":"13F097AC-0D66-41C7-83CC-43927D22EF4C","isFixed":0}],"hasFixedLayers":false}}}
-    );
-  </script>
-
-</body>
+    ],
+    "width" : 375,
+    "userCodeOnEnter" : "",
+    "symbolID" : "",
+    "name" : "iPhone 8"
+  }
+];
+            
+            //---DO NOT MODIFY---
+            //MADesktopPreviewWindowController depends on exact match of strings in this block
+            var currentScreenTransitionUid = '';
+            var currentTimelineIndex = 0;
+            //---END OF DO NOT MODIFY---
+        </script>
+		<script src="mityaPreview.js"></script>
+		<script>
+			Framer.DeviceView.Devices["mitya_preview"] = {
+				"deviceType": "desktop",
+				"screenWidth": mityaSettings.screenWidth,
+				"screenHeight": mityaSettings.screenHeight,
+				"fullScreen": 1,
+				"padding":0,
+				"deviceImageWidth": mityaSettings.screenWidth,
+				"deviceImageHeight": mityaSettings.screenHeight
+			};
+			Framer.Device.deviceType = "mitya_preview";
+			Framer.Device.background.backgroundColor = "#FFF"
+            
+            Framer.Defaults.Animation.time = 0.2;
+            
+            Framer.Extras.Preloader.enable();
+            Framer.Extras.Preloader.setLogo("https://mitya.com/images/favicon.png");
+		</script>
+		<script>
+			''
+			runStartupUserCode();
+			//showHomeScreen()
+            setTimeout(showHomeScreen, 100);
+		</script>
+	</head>
+	<body>
+	</body>
 </html>
