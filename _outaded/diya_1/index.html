@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+        <style>
+            body {
+                height:100%;
+                overflow: hidden;
+            }
+            html {
+                height:100%;
+            }
+        </style>
+		<script>
+			var MADebugMode = false;
+			var mitya = {};
+			var m = mitya;
+		</script>
+        <script>
+            var mityaSettings = {
+  "screenWidth" : 375,
+  "screenHeight" : 667,
+  "screenDensity" : 1,
+  "imageFilepathPrefix" : ""
+};
+            var userCodeOnEnter = '';
+            var screens = [
+  {
+    "height" : 667,
+    "uid" : "D3AFDF83-B822-496C-869E-C149436A958B",
+    "homeScreen" : true,
+    "layers" : [
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "F9096E15-4988-4B0F-94E1-0DE2FADF97DE",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,667 L0,667 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(237,246,255,1.000000)",
+        "userCode" : "",
+        "index" : 0,
+        "parentScreenUid" : "D3AFDF83-B822-496C-869E-C149436A958B",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "rrr",
+        "height" : 667,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "rrr",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "32FDD45F-396E-4BF6-8B0F-891B71B3145B",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,120 L0,120 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(66,90,113,1.000000)",
+        "userCode" : "",
+        "index" : 1,
+        "parentScreenUid" : "D3AFDF83-B822-496C-869E-C149436A958B",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Rectangle",
+        "height" : 120,
+        "borderWidth" : 0,
+        "top" : 1,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "Rectangle",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 1
+      },
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "940D9CEF-3419-4C15-9D56-54D7955A3834",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 70,
+        "screenTransitions" : [
+          {
+            "action" : "Tap",
+            "uid" : "417B4F98-4763-4C61-BB27-CDDD9B7A5519-29372-000020D2CB3018C0",
+            "toScreenId" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+            "animation" : "Timeline",
+            "fromScreenId" : "D3AFDF83-B822-496C-869E-C149436A958B",
+            "timelines" : [
+              {
+                "timelineLayers" : [
+                  {
+                    "guid" : "rrr",
+                    "animationBands" : [
+
+                    ]
+                  },
+                  {
+                    "guid" : "Rectangle",
+                    "animationBands" : [
+                      {
+                        "transitions" : [
+                          {
+                            "c1y" : 0.46,
+                            "animationKey" : "height",
+                            "gsapEase" : "CustomEase.create('','0.250000,0.460000,0.450000,0.940000')",
+                            "controlPoints" : "0.25,0.46,0.45,0.94",
+                            "active" : true,
+                            "c2x" : 0.45,
+                            "previousEasingDuration" : 0.20000000298023224,
+                            "damping" : 30,
+                            "type" : 0,
+                            "keyframes" : [
+                              {
+                                "value" : 120,
+                                "time" : 0,
+                                "parsedValue" : 120
+                              },
+                              {
+                                "value" : 250,
+                                "time" : 0.20000000298023224,
+                                "parsedValue" : 250
+                              }
+                            ],
+                            "stiffness" : 300,
+                            "c2y" : 0.94,
+                            "c1x" : 0.25,
+                            "mass" : 3
+                          }
+                        ],
+                        "animationKey" : "height"
+                      },
+                      {
+                        "transitions" : [
+                          {
+                            "c1y" : 0.46,
+                            "animationKey" : "path",
+                            "gsapEase" : "CustomEase.create('','0.250000,0.460000,0.450000,0.940000')",
+                            "controlPoints" : "0.25,0.46,0.45,0.94",
+                            "active" : true,
+                            "c2x" : 0.45,
+                            "previousEasingDuration" : 0.20000000298023224,
+                            "damping" : 30,
+                            "type" : 0,
+                            "keyframes" : [
+                              {
+                                "value" : "M0,0 L375,0 L375,120 L0,120 L0,0 Z",
+                                "time" : 0,
+                                "parsedValue" : "M0,0 L375,0 L375,120 L0,120 L0,0 Z"
+                              },
+                              {
+                                "value" : "M0,0 L375,0 L375,250 L0,250 L0,0 Z",
+                                "time" : 0.20000000298023224,
+                                "parsedValue" : "M0,0 L375,0 L375,250 L0,250 L0,0 Z"
+                              }
+                            ],
+                            "stiffness" : 300,
+                            "c2y" : 0.94,
+                            "c1x" : 0.25,
+                            "mass" : 3
+                          }
+                        ],
+                        "animationKey" : "path"
+                      }
+                    ]
+                  },
+                  {
+                    "guid" : "1",
+                    "animationBands" : [
+                      {
+                        "transitions" : [
+                          {
+                            "c1y" : 0.46,
+                            "animationKey" : "x",
+                            "gsapEase" : "CustomEase.create('','0.250000,0.460000,0.450000,0.940000')",
+                            "controlPoints" : "0.25,0.46,0.45,0.94",
+                            "active" : true,
+                            "c2x" : 0.45,
+                            "previousEasingDuration" : 0.20000000298023224,
+                            "damping" : 30,
+                            "type" : 0,
+                            "keyframes" : [
+                              {
+                                "value" : 275,
+                                "time" : 0,
+                                "parsedValue" : 275
+                              },
+                              {
+                                "value" : 30,
+                                "time" : 0.20000000298023224,
+                                "parsedValue" : 30
+                              }
+                            ],
+                            "stiffness" : 300,
+                            "c2y" : 0.94,
+                            "c1x" : 0.25,
+                            "mass" : 3
+                          }
+                        ],
+                        "animationKey" : "x"
+                      }
+                    ]
+                  }
+                ],
+                "duration" : 0.20000000298023224,
+                "active" : true
+              }
+            ],
+            "type" : 0,
+            "parentScreenTransitionUid" : "",
+            "autoReturn" : 0
+          }
+        ],
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 275,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M35,0 L35,0 C54.3299662,-3.55085719e-15 70,15.6700338 70,35 L70,35 C70,54.3299662 54.3299662,70 35,70 L35,70 C15.6700338,70 2.36723813e-15,54.3299662 0,35 L0,35 C-2.36723813e-15,15.6700338 15.6700338,3.55085719e-15 35,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(237,246,255,1.000000)",
+        "userCode" : "",
+        "index" : 2,
+        "parentScreenUid" : "D3AFDF83-B822-496C-869E-C149436A958B",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "1",
+        "height" : 70,
+        "borderWidth" : 0,
+        "top" : 26,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 275,
+        "guid" : "1",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 26
+      }
+    ],
+    "width" : 375,
+    "userCodeOnEnter" : "",
+    "symbolID" : "",
+    "name" : "state_1"
+  },
+  {
+    "height" : 667,
+    "uid" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+    "homeScreen" : false,
+    "layers" : [
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "C39F4CD0-8FA2-4833-8B23-678EECE9F30E",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,667 L0,667 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(237,246,255,1.000000)",
+        "userCode" : "",
+        "index" : 0,
+        "parentScreenUid" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "rrr",
+        "height" : 667,
+        "borderWidth" : 0,
+        "top" : 0,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "rrr",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 0
+      },
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "05472CD1-E6B3-45A3-9CA9-38842B28FD5E",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 375,
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 0,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M0,0 L375,0 L375,250 L0,250 L0,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(66,90,113,1.000000)",
+        "userCode" : "",
+        "index" : 1,
+        "parentScreenUid" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "Rectangle",
+        "height" : 250,
+        "borderWidth" : 0,
+        "top" : 1,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 0,
+        "guid" : "Rectangle",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 1
+      },
+      {
+        "sketchClassName" : "MSRectangleShape",
+        "uid" : "E720D7DE-8E44-4BCF-9EC5-F06E82937EB7",
+        "rotation" : -0,
+        "shadowRadius" : 0,
+        "width" : 70,
+        "screenTransitions" : [
+          {
+            "action" : "Tap",
+            "uid" : "DADF1612-D148-40BE-B111-325AC3DAC31A-29372-000020D59A2537C9",
+            "toScreenId" : "D3AFDF83-B822-496C-869E-C149436A958B",
+            "animation" : "Reverse",
+            "fromScreenId" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+            "timelines" : [
+
+            ],
+            "type" : 0,
+            "parentScreenTransitionUid" : "417B4F98-4763-4C61-BB27-CDDD9B7A5519-29372-000020D2CB3018C0",
+            "autoReturn" : 0
+          }
+        ],
+        "borderOptions" : {
+          "lineCap" : "butt",
+          "lineDash" : "100%"
+        },
+        "borderColor" : "rgba(0,0,0,0.000000)",
+        "opacity" : 1,
+        "clip" : false,
+        "parentLayerUid" : "",
+        "left" : 30,
+        "hidden" : false,
+        "overrides" : {
+
+        },
+        "blendingMode" : "normal",
+        "shadowOffsetY" : 0,
+        "isSymbolInstance" : false,
+        "path" : "M35,0 L35,0 C54.3299662,-3.55085719e-15 70,15.6700338 70,35 L70,35 C70,54.3299662 54.3299662,70 35,70 L35,70 C15.6700338,70 2.36723813e-15,54.3299662 0,35 L0,35 C-2.36723813e-15,15.6700338 15.6700338,3.55085719e-15 35,0 Z",
+        "flattenGroup" : true,
+        "backgroundColor" : "rgba(237,246,255,1.000000)",
+        "userCode" : "",
+        "index" : 2,
+        "parentScreenUid" : "33113173-2B5C-48DB-BFAC-38D396180E29",
+        "shadowColor" : "rgba(0,0,0,0.000000)",
+        "name" : "1",
+        "height" : 70,
+        "borderWidth" : 0,
+        "top" : 26,
+        "isGroup" : false,
+        "verticalScroll" : false,
+        "parentLayerGuid" : "",
+        "imagePath" : "index-images\/",
+        "cornerRadius" : 0,
+        "rasterized" : false,
+        "horizontalScroll" : false,
+        "shadowOffsetX" : 0,
+        "x" : 30,
+        "guid" : "1",
+        "scale" : 1,
+        "parentSymbolID" : "",
+        "y" : 26
+      }
+    ],
+    "width" : 375,
+    "userCodeOnEnter" : "",
+    "symbolID" : "",
+    "name" : "state_2"
+  }
+];
+            
+            //---DO NOT MODIFY---
+            //MADesktopPreviewWindowController depends on exact match of strings in this block
+            var currentScreenTransitionUid = '';
+            var currentTimelineIndex = 0;
+            //---END OF DO NOT MODIFY---
+        </script>
+		<script src="mityaPreview.js"></script>
+		<script>
+			Framer.DeviceView.Devices["mitya_preview"] = {
+				"deviceType": "desktop",
+				"screenWidth": mityaSettings.screenWidth,
+				"screenHeight": mityaSettings.screenHeight,
+				"fullScreen": 1,
+				"padding":0,
+				"deviceImageWidth": mityaSettings.screenWidth,
+				"deviceImageHeight": mityaSettings.screenHeight
+			};
+			Framer.Device.deviceType = "mitya_preview";
+			Framer.Device.background.backgroundColor = "#FFF"
+            
+            Framer.Defaults.Animation.time = 0.2;
+            
+            Framer.Extras.Preloader.enable();
+            Framer.Extras.Preloader.setLogo("https://mitya.com/images/favicon.png");
+		</script>
+		<script>
+			''
+			runStartupUserCode();
+			//showHomeScreen()
+            setTimeout(showHomeScreen, 100);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
